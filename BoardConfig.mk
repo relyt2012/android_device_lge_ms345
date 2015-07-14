@@ -14,25 +14,19 @@
 # limitations under the License.
 #
 
-# inherit from common g4stylus
--include device/lge/g4stylus-common/BoardConfigCommon.mk
+# inherit from common c50
+-include device/lge/c50-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := g4stylus,h631
+TARGET_OTA_ASSERT_DEVICE := c50,ms345
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/h631/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/ms345/bluetooth
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_h631_defconfig
-
-# NFC
-BOARD_NFC_CHIPSET := pn547
+TARGET_KERNEL_CONFIG := cyanogenmod_ms345_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 25165824
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 25165824
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2684354560
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 11676942336
-
-# inherit from the proprietary version
--include vendor/lge/h631/BoardConfigVendor.mk
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
